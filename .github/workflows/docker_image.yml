@@ -9,11 +9,8 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/workflow-deploy-gcp.yml
-    with:
-      container-name: "nachet-backend"
-      tag: "4402fe7ead124887a6d2b463ba79903586c66898"
-      env_vars: |
-        FAKE_REPOSITORY_SECRET=${{secrets.FAKE_REPOSITORY_SECRET}}
-
-    secrets: inherit
+      uses: ./.github/workflows/workflow-deploy-gcp.yml
+      with:
+        container-name: "nachet-backend"
+        tag: "4402fe7ead124887a6d2b463ba79903586c66898"
+      secrets: inherit
