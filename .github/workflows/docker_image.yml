@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    uses: .github/workflows/workflow-deploy-gcp.yml
+    uses: ./.github/workflows/workflow-deploy-gcp.yml
     with:
       container-name: "nachet-backend"
       tag: "latest"

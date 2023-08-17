@@ -3,6 +3,9 @@ name: Reusable Docker container deployment to Google Cloud Run
 on:
   workflow_call:
     inputs:
+      env_vars:
+        required: false
+        type: string
       container-name:
         required: true
         type: string
@@ -29,3 +32,4 @@ jobs:
           service: ${{inputs.container-name}}
           # Region in which the resource can be found.
           region: ${{ secrets.GCP_CLOUDRUN_REGION }}
+          env_vars: ${{ inputs.env_vars }}
