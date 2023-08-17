@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/workflow-deploy-gcp.yml
     with:
       container-name: "nachet-backend"
-      tag: "latest"
+      tag: "4402fe7ead124887a6d2b463ba79903586c66898"
       env_vars: |
         FAKE_REPOSITORY_SECRET=FAKE_REPOSITORY_SECRET_VALUE
 
