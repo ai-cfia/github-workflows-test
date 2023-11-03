@@ -1,16 +1,16 @@
-name: Docker Image CI
+# name: Docker Image CI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-  # Absence of the branches property under pull_request means it will apply to all branches
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#   # Absence of the branches property under pull_request means it will apply to all branches
 
-jobs:
-  deploy:
-      uses: ./.github/workflows/workflow-deploy-gcp.yml
-      with:
-        container-name: "nachet-backend"
-        tag: "4402fe7ead124887a6d2b463ba79903586c66898"
-      secrets: inherit
+# jobs:
+#   deploy:
+#       uses: ./.github/workflows/workflow-deploy-gcp.yml
+#       with:
+#         container-name: "nachet-backend"
+#         tag: "4402fe7ead124887a6d2b463ba79903586c66898"
+#       secrets: inherit
